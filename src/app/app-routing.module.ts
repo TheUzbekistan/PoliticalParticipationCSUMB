@@ -5,6 +5,7 @@ import {PetitionFormComponent} from './petition-form/petition-form.component';
 const routes: Routes = [
   { path: 'pet', component: PetitionComponent },
   { path: 'form', component: PetitionFormComponent }
+
 ];
 
 @NgModule({

@@ -1,24 +1,60 @@
 <!--The content below is only a placeholder and can be replaced.-->
 
-<div style="text-align:center">
+<div id="titlediv">
+  <img src="https://csumb.edu/sites/all/themes/custom/steinbeck/img/logos/csumb-logo-blue.svg" id="logo">
   <h1>
-    Welcome to {{ title }}!
+    {{ title }}
   </h1>
   <h1> testing ui kit</h1>
   <a class = "nav-link" routerLink = "pet" [routerLinkActive] = "'is-active'">Petitions</a>
   <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+
+
+
+<table class="uk-table uk-table-responsive uk-table-divider">
+  <tbody>
+      <tr>
+        <td class="supportdiv">
+          <h2 class="number">77</h2>
+          <button class = "uk-button uk-button-primary" id="petid1" uk-toggle="target: #modal-example">Support</button> 
+        </td>
+          <td class = "info">
+            <h3>Title of Petition</h3>
+            <span>Information about this petition the jclkds l;kcj as;lkjdcljasdlck jal;ks dclk;jasdlkcjlkjsadfnlcjla sjef lknalksdj flk vnsdkljflwe;nicjasdkjfnlaksjdfl;javk elkjskldfjsdk;lckafjl ksdjk vkajsfjlksdvn ljasefn klsjvlkaewjkflkjsadkvnlaksdjvlkenfkljsdlkvnklajsd lkfn;ihvljkjasjlkfjasdlkjkdsfjsdds fkds f sdfl sdfjksdfkl avklaskjv kldsjfklj avlkjslkaj lkv dsklvnsdkcn kjsdfjnv klsdjlkfj kv k;ljsoiehfisudvhafskjhsdkl j lvknvi;sglahsvnavsk ghihasdfh</span>
+          </td>
+      </tr>
+      <tr>
+          <td class="supportdiv">
+              <h2 class="number">77</h2>
+            <button class = "uk-button uk-button-primary" id="petid2" uk-toggle="target: #modal-example">Support</button> 
+          </td>
+            <td class = "info">
+              <h3>Title of Petition</h3>
+              <span>Information about this petition the jclkds l;kcj as;lkjdcljasdlck jal;ks dclk;jasdlkcjlkjsadfnlcjla sjef lknalksdj flk vnsdkljflwe;nicjasdkjfnlaksjdfl;javk elkjskldfjsdk;lckafjl ksdjk vkajsfjlksdvn ljasefn klsjvlkaewjkflkjsadkvnlaksdjvlkenfkljsdlkvnklajsd lkfn;ihvljkjasjlkfjasdlkjkdsfjsdds fkds f sdfl sdfjksdfkl avklaskjv kldsjfklj avlkjslkaj lkv dsklvnsdkcn kjsdfjnv klsdjlkfj kv k;ljsoiehfisudvhafskjhsdkl j lvknvi;sglahsvnavsk ghihasdfh</span>
+            </td>
+        </tr>
+  </tbody>
+</table>
+  
+
+<!-- This is the modal -->
+<div id="modal-example" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body">
+        <h2 class="uk-modal-title">Title of Petition</h2>
+        <form>
+          <span>Email Address:</span>
+          <input type="text" name="email">
+          <p class="uk-text-right">
+              <button class="uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
+              <button class="uk-button uk-button-primary" type="submit">Submit</button>
+          </p>
+        </form>
+        
+    </div>
+</div>
+
+
+
 
 <router-outlet></router-outlet>
