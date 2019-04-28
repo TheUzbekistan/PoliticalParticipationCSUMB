@@ -4,11 +4,13 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PetitionFormComponent } from './petition-form/petition-form.component';
+import { PetitionComponent } from './petition/petition.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PetitionFormComponent
+    PetitionFormComponent,
+    PetitionComponent
   ],
   imports: [
     BrowserModule,
