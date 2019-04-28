@@ -12,15 +12,14 @@ const app = express();
 
 // Serve only the static files form the dist directory
 
-app.use(express.static(__dirname + '/dist/PoliticalParticipationCSUMB'));
-
+app.use(express.static(__dirname + '/dist/PoliticalParticipationCSUMB/src'));
 
 
 app.get('/*', function(req,res) {
 
     
 
-res.sendFile(path.join(__dirname+'/dist/PoliticalParticipationCSUMB/index.html'));
+res.sendFile(path.join(__dirname+'/dist/PoliticalParticipationCSUMB/src/index.html'));
 
 });
 
