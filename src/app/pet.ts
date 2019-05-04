@@ -1,6 +1,6 @@
 export class Pet {
     _id : string;
     title: string;
-    descriptions: string;
+    description: string;
     numSignatures: number;
 }
