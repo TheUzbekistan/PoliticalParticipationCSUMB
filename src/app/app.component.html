@@ -22,26 +22,16 @@
 </table> -->
 <!-- <table class="uk-table uk-table-responsive uk-table-divider">
   <tbody>
-      <tr>
+      <tr *ngFor="let pet of testpet">
         <td class="supportdiv">
-          <h2 class="number">77</h2>
-          <button class = "uk-button uk-button-primary" id="petid1" uk-toggle="target: #modal-example">Support</button> 
+          <h2 class="number">{{ pet.numSignatures }}</h2>
+          <button class = "uk-button uk-button-primary" id="{{ pet._id }}" uk-toggle="target: #modal-example" (click)="assignPet(pet);">Support</button> 
         </td>
           <td class = "info">
-            <h3>Title of Petition</h3>
-            <span>Information about this petition the jclkds l;kcj as;lkjdcljasdlck jal;ks dclk;jasdlkcjlkjsadfnlcjla sjef lknalksdj flk vnsdkljflwe;nicjasdkjfnlaksjdfl;javk elkjskldfjsdk;lckafjl ksdjk vkajsfjlksdvn ljasefn klsjvlkaewjkflkjsadkvnlaksdjvlkenfkljsdlkvnklajsd lkfn;ihvljkjasjlkfjasdlkjkdsfjsdds fkds f sdfl sdfjksdfkl avklaskjv kldsjfklj avlkjslkaj lkv dsklvnsdkcn kjsdfjnv klsdjlkfj kv k;ljsoiehfisudvhafskjhsdkl j lvknvi;sglahsvnavsk ghihasdfh</span>
+            <h3>{{ pet.title }}</h3>
+          <span>{{ pet.descriptions }}</span>
           </td>
       </tr>
-      <tr>
-          <td class="supportdiv">
-              <h2 class="number">77</h2>
-            <button class = "uk-button uk-button-primary" id="petid2" uk-toggle="target: #modal-example">Support</button> 
-          </td>
-            <td class = "info">
-              <h3>Title of Petition</h3>
-              <span>Information about this petition the jclkds l;kcj as;lkjdcljasdlck jal;ks dclk;jasdlkcjlkjsadfnlcjla sjef lknalksdj flk vnsdkljflwe;nicjasdkjfnlaksjdfl;javk elkjskldfjsdk;lckafjl ksdjk vkajsfjlksdvn ljasefn klsjvlkaewjkflkjsadkvnlaksdjvlkenfkljsdlkvnklajsd lkfn;ihvljkjasjlkfjasdlkjkdsfjsdds fkds f sdfl sdfjksdfkl avklaskjv kldsjfklj avlkjslkaj lkv dsklvnsdkcn kjsdfjnv klsdjlkfj kv k;ljsoiehfisudvhafskjhsdkl j lvknvi;sglahsvnavsk ghihasdfh</span>
-            </td>
-        </tr>
   </tbody>
 </table> -->
   
@@ -49,7 +39,9 @@
 <!-- This is the modal -->
 <!-- <div id="modal-example" uk-modal>
     <div class="uk-modal-dialog uk-modal-body">
-        <h2 class="uk-modal-title">Title of Petition</h2>
+        <h2 class="uk-modal-title">
+          {{ supportPet.title }}
+        </h2>
         <form>
           <span>Email Address:</span>
           <input type="text" name="email">
@@ -62,22 +54,7 @@
     </div>
 </div> -->
 
-<div id="form-modal" uk-modal>
-    <div class="uk-modal-dialog uk-modal-body uk-text-center" id="formPopUp">
-      <h2 class="uk-card-title">Create A New Petition</h2>
-        <form>
-          <input type="text" class="uk-card-title" id="titleInput" placeholder="Title">
-          <textarea class="uk-textarea" id="descriptionInput" rows="5" placeholder="Description"></textarea><br>
-          <input type="text" class="uk-card-title uk-text-small" id="emailInput" placeholder="Email">
-          <p class="uk-text-center">
-              <button class="uk-button uk-button-default uk-modal-close uk-margin-xlarge-right" type="button" id="cancelButton">Cancel</button>
-              <button class="uk-button uk-button-primary" type="submit">Submit</button>
-          </p>
-        </form>
-        
-    </div>
-</div>
-
+<app-petition-form></app-petition-form>
 
 <!-- <router-outlet></router-outlet> -->
 
