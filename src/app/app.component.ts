@@ -8,7 +8,7 @@ import { GetsetpetService } from './getsetpet.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-
+  title = 'The Otter Petitions';
 
   constructor() { }
 
