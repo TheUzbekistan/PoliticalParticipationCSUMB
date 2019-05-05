@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { PetitionFormComponent } from './petition-form/petition-form.component';
 import { PetitionComponent } from './petition/petition.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
