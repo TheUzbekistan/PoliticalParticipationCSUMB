@@ -13,20 +13,20 @@ const httpOptions = {
 })
 export class GetsetpetService {
 
-  private petUrl = 'api/petitions'; //URL to api
-
+  private getpetUrl = 'http://petitions-backend-csumb.herokuapp.com/allPetitions/'; //URL to api
+  private setpetUrl = 'http://petitions-backend-csumb.herokuapp.com/addPetition/';
   constructor(
     private http: HttpClient
   ) { }
 
   getPet(): Observable<Pet[]>{
-    return this.http.get<Pet[]>(this.petUrl)
+    return this.http.get<Pet[]>(this.getpetUrl)
       .pipe(
         catchError(this.handleError<Pet[]>('getPet', [])) //catch error
       );
   }
   setPet(pet : Pet): Observable<Pet> {
-    return this.http.post<Pet>(this.petUrl, pet, httpOptions)
+    return this.http.post<Pet>(this.setpetUrl, pet, httpOptions)
     .pipe(
       catchError(this.handleError<Pet>('setPet'))
       ); //catch error

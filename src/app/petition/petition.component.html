@@ -1,7 +1,7 @@
 
 <table class="uk-table uk-table-responsive uk-table-divider">
   <tbody>
-      <tr *ngFor = "let pet of testpet">
+      <tr *ngFor = "let pet of petitions">
         <td class="supportdiv">
           <h2 class="number">{{pet.numSignatures}} Signatures</h2>
           <button (click) = "onSelect(pet)" class = "uk-button uk-button-primary" id="petid1" uk-toggle="target: #modal-example">Support</button> 

@@ -6,8 +6,9 @@
           <textarea class="uk-textarea" id="descriptionInput" rows="5" placeholder="Description" ng-required="required"></textarea><br>
           <input type="text" class="uk-card-title uk-text-small" id="emailInput" placeholder="Email" ng-required="required">
           <p class="uk-text-center">
+              <button>Test</button>
               <button class="uk-button uk-button-default uk-modal-close uk-margin-xlarge-right" type="button" id="cancelButton">Cancel</button>
-              <button class="uk-button uk-button-primary" type="submit">Submit</button>
+              <button class="uk-button uk-button-primary" type="submit" (click) = "onClick()">Submit</button>
           </p>
         </form>
     </div>
