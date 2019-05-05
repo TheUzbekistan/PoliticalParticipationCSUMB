@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Pet } from "../pet";
 import { GetsetpetService } from '../getsetpet.service';
+import { SupportPetitionService } from '../support-petition.service';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-petition',
@@ -16,10 +18,11 @@ export class PetitionComponent implements OnInit {
     { _id: 'a002', title: 'Petition3', description: 'description3', numSignatures: 3},
     { _id: 'a003', title: 'Petition4', description: 'description4', numSignatures: 770000000000}
   ];
-
+  test2pet: Pet;
   selectedpet : Pet;
+  email: string;
   
-  constructor(private getsetpetService: GetsetpetService) { }
+  constructor(private getsetpetService: GetsetpetService, private supportService: SupportPetitionService) { }
 
   ngOnInit() {
      this.getPets();
@@ -34,4 +37,11 @@ export class PetitionComponent implements OnInit {
     this.selectedpet = pet;
     console.log("selectedpet set to :", this.selectedpet.title)
   }
+
+  emailSubmission(email, pet) {
+    this.email = email;
+    console.log("EMAIL: ", email);
+    this.supportService.newSupport(pet).subscribe(pet => this.test2pet = pet);
+  }
+
 }
