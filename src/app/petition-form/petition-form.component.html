@@ -2,13 +2,12 @@
     <div class="uk-modal-dialog uk-modal-body uk-text-center" id="formPopUp">
       <h2 class="uk-card-title">Create A New Petition</h2>
         <form>
-          <input type="text" class="uk-card-title" id="titleInput" placeholder="Title" ng-required="required">
-          <textarea class="uk-textarea" id="descriptionInput" rows="5" placeholder="Description" ng-required="required"></textarea><br>
-          <input type="text" class="uk-card-title uk-text-small" id="emailInput" placeholder="Email" ng-required="required">
+          <input type="text" class="uk-card-title" id="titleInput" placeholder="Title" ng-required="required" #titleInput>
+          <textarea class="uk-textarea" id="descriptionInput" rows="5" placeholder="Description" ng-required="required" #descriptionInput></textarea><br>
+          <input type="text" class="uk-card-title uk-text-small" id="emailInput" placeholder="Email" ng-required="required" #emailInput>
           <p class="uk-text-center">
-              <button>Test</button>
               <button class="uk-button uk-button-default uk-modal-close uk-margin-xlarge-right" type="button" id="cancelButton">Cancel</button>
-              <button class="uk-button uk-button-primary" type="submit" (click) = "onClick()">Submit</button>
+              <button class="uk-button uk-button-primary uk-modal-close" type="submit" (click) = "addPetition(emailInput.value, titleInput.value, descriptionInput.value)">Submit</button>
           </p>
         </form>
     </div>

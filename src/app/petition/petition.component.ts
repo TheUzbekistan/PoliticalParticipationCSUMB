@@ -41,7 +41,7 @@ export class PetitionComponent implements OnInit {
   emailSubmission(email, pet) {
     this.email = email;
     console.log("EMAIL: ", email);
-    this.supportService.newSupport(pet).subscribe(pet => this.test2pet = pet);
+    this.supportService.newSupport(pet, email).subscribe();
   }
 
 }

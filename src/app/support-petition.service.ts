@@ -17,7 +17,8 @@ export class SupportPetitionService {
 
   supportedPetition: Pet;
   email: string;
-  private petUrl = 'https://petitions-backend-csumb.herokuapp.com/getPetitionByTitle/';
+  private signPetUrl = 'https://petitions-backend-csumb.herokuapp.com/signPetition/';
+  private addPetUrl = 'https://petitions-backend-csumb.herokuapp.com/addPetition/';
   
 
   constructor(private http: HttpClient) { }
@@ -26,14 +27,21 @@ export class SupportPetitionService {
     this.supportedPetition = pet;
   }
 
-  newSupport(pet: Pet) {
+  newSupport(pet: Pet, email) {
     console.log(pet);
     //var tempArr = [];
     //tempArr['title'] = "Hi";
     //tempArr['description'] = "AHOY";
-    return this.http.get(this.petUrl + "This is a title")
+    console.log(pet['_id']['$oid']);
+    return this.http.get(this.signPetUrl + email + "/" + pet['_id']['$oid']);
   }
 
+  newPetition(email, title, description) {
+    console.log("Email: " + email);
+    console.log("Title: " + title);
+    console.log("Description: " + description);
+    return this.http.get(this.addPetUrl + email + "/" + title + "/" + description);
+  }
   
 
 }
