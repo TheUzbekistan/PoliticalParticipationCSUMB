@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { GetsetpetService } from '../getsetpet.service';
 import { SupportPetitionService } from '../support-petition.service';
+import { Router } from '@angular/router'
 import { Pet } from '../pet';
-import { timer } from 'rxjs';
 
 
 @Component({
@@ -13,7 +13,7 @@ import { timer } from 'rxjs';
 export class PetitionFormComponent implements OnInit {
   temppet : Pet = { _id: 'a000', title: 'Petition1', description: 'Information about thfh', numSignatures: 77};
 
-  constructor(private getpet : GetsetpetService, private supportService: SupportPetitionService) { }
+  constructor(private getpet : GetsetpetService, private supportService: SupportPetitionService, private router:Router) { }
 
   ngOnInit() {
   }
@@ -25,5 +25,4 @@ export class PetitionFormComponent implements OnInit {
   addPetition(email, title, description) {
     this.supportService.newPetition(email, title, description).subscribe();
   }
-
 }
